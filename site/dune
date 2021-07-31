@@ -1,0 +1,6 @@
+(rule
+ (deps ../js/main.bc.js)
+ (target ./print.js )
+ (mode
+  (promote (until-clean)))
+ (action (copy %{deps} %{target})))
