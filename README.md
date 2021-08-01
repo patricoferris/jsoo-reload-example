@@ -26,7 +26,7 @@ Then over in the website directory there's another dune file with a single rule 
  (action (copy %{deps} %{target})))
 ```
 
-It copies the file and automatically promotes it into the site directory when it is different to what is already there. Then there's a normal `index.js` file which uses the code from `print.js` and finally the `index.html` loads the files in one after the other. Here I'm then using the bundler [parcel](https://parceljs.org/) because it's the one I know best. The Makefile then uses `npx` and `concurrently` to bundle and build jsoo simultaneously.
+It copies the file and automatically promotes it into the site directory when it is different to what is already there. Then there's a normal `index.js` file which uses the code from `print.js` and finally the `index.html` loads the `index.js`. Here I'm then using the bundler [parcel](https://parceljs.org/) because it's the one I know best. The Makefile then uses `npx` and `concurrently` to bundle and build jsoo simultaneously.
 
 <!-- $MDX file=Makefile -->
 ```
